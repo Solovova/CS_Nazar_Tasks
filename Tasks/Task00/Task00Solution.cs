@@ -8,9 +8,6 @@ public class Task00Solution : ITaskSolution<Task00Data>{
             0, arr.GetLength(0) - 1, 
             0, arr.GetLength(1) - 1);
         foreach (var (ni,nj) in neighborCells){
-                if (ni == i && nj == j){
-                    continue;
-                }
                 if (arr[ni, nj] == 1 && arr[i, j] == 0){
                     return 1;
                 }
