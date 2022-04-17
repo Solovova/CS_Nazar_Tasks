@@ -8,10 +8,9 @@ public class Task01Solution : ITaskSolution<Task01Data>{
             throw new ArgumentException();
         }
 
-        var outList = new List<int[]>();
-        outList.Add(data.InArr1.ToArray());
+        var outList = new List<int[]>{data.InArr1.ToArray()};
         var step = data.InArr1.ToArray();
-        for (int i = 0; i < data.InArr1.Length; i++){
+        for (var i = 0; i < data.InArr1.Length; i++){
             while (step[i]!=data.InArr2[i]){
                 if (step[i] < data.InArr2[i]){
                     step[i]++;

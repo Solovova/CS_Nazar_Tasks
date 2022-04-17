@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AC3D8B6A-C7ED-4E57-A590-FAFC80E73079}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLifeGui", "GameLifeGui\GameLifeGui.csproj", "{0761BA58-D873-42EC-AD14-29BB3861B5D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AC3D8B6A-C7ED-4E57-A590-FAFC80E73079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC3D8B6A-C7ED-4E57-A590-FAFC80E73079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC3D8B6A-C7ED-4E57-A590-FAFC80E73079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0761BA58-D873-42EC-AD14-29BB3861B5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0761BA58-D873-42EC-AD14-29BB3861B5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0761BA58-D873-42EC-AD14-29BB3861B5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0761BA58-D873-42EC-AD14-29BB3861B5D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

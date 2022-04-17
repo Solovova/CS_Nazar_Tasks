@@ -20,11 +20,11 @@ public class Task00Generator : ITaskGenerator<Task00Data>{
     public Task00Data GetRandom(){
         const int mi = 10;
         const int mj = 12;
-        int[,] arr = new int[mi, mj];
+        var arr = new int[mi, mj];
 
-        Random rnd = new Random();
-        for (int i = 0; i < arr.GetLength(0); i++){
-            for (int j = 0; j < arr.GetLength(1); j++)
+        var rnd = new Random();
+        for (var i = 0; i < arr.GetLength(0); i++){
+            for (var j = 0; j < arr.GetLength(1); j++)
                 arr[i, j] = rnd.Next(0, 2);
         }
 

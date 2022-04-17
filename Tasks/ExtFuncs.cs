@@ -37,8 +37,8 @@ public static class ExtFuncs{
 
     public static List<(int, int)> GetNeighborCellsOld(int x,int y, int minX, int maxX, int minY, int maxY){
         var result = new List<(int, int)>();
-        for (int tx = x-1; tx <= x+1; tx++){
-            for (int ty = y-1; ty <= y+1; ty++){
+        for (var tx = x-1; tx <= x+1; tx++){
+            for (var ty = y-1; ty <= y+1; ty++){
                 if ((tx == x && ty == y) || (tx < minX) || (tx > maxX) || (ty < minY) || (ty > maxY)){
                     continue;
                 }
