@@ -1,6 +1,6 @@
-﻿namespace Tasks.Func;
+﻿namespace Tasks;
 
-public static class Func{
+public static class ExtFuncs{
     public static void ToConsole2DimArray(int[,] arr){
         for (var i = 0; i < arr.GetLength(0); i++){
             for (var j = 0; j < arr.GetLength(1); j++){
@@ -32,6 +32,20 @@ public static class Func{
         for (int i = 0; i < result.Length; i++){
             result[i] = rnd.Next(min,max+1);
         }
+        return result;
+    }
+
+    public static List<(int, int)> GetNeighborCells(int x,int y, int minX, int maxX, int minY, int maxY){
+        var result = new List<(int, int)>();
+        for (int tx = x-1; tx <= x+1; tx++){
+            for (int ty = y-1; ty <= y+1; ty++){
+                if ((tx == x && ty == y) || (tx < minX) || (tx > maxX) || (ty < minY) || (ty > maxY)){
+                    continue;
+                }
+                result.Add((tx,ty));
+            }    
+        }
+
         return result;
     }
 }

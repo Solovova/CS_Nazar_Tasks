@@ -13,8 +13,8 @@ public class Task01Generator : ITaskGenerator<Task01Data>{
     
     public Task01Data GetRandom(){
         return new Task01Data{
-            InArr1 = Func.Func.GetArrRandom(7,0,3),
-            InArr2 = Func.Func.GetArrRandom(7,0,3)
+            InArr1 = ExtFuncs.GetArrRandom(7,0,3),
+            InArr2 = ExtFuncs.GetArrRandom(7,0,3)
         };
     }
 }

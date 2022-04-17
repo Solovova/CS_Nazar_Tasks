@@ -11,12 +11,12 @@ public class Task02OutConsole : ITaskOutConsole<Task02Data>{
         }
 
         Console.WriteLine("In data arr1:");
-        Func.Func.ToConsole1DimArray(data.InArr1);
+        ExtFuncs.ToConsole1DimArray(data.InArr1);
         
         Console.WriteLine("In data arr2:");
-        Func.Func.ToConsole1DimArray(data.InArr2);
+        ExtFuncs.ToConsole1DimArray(data.InArr2);
 
         Console.WriteLine("Out data:");
-        Func.Func.ToConsole1DimArray(data.OutArr);
+        ExtFuncs.ToConsole1DimArray(data.OutArr);
     }
 }

@@ -9,9 +9,9 @@ public class Task00OutConsole : ITaskOutConsole<Task00Data>{
         }
 
         Console.WriteLine("In data:");
-        Func.Func.ToConsole2DimArray(data.InArr);
+        ExtFuncs.ToConsole2DimArray(data.InArr);
 
         Console.WriteLine("Out data:");
-        Func.Func.ToConsole2DimArray(data.OutArr);
+        ExtFuncs.ToConsole2DimArray(data.OutArr);
     }
 }

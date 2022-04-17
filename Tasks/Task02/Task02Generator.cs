@@ -12,8 +12,8 @@ public class Task02Generator : ITaskGenerator<Task02Data>{
 
     public Task02Data GetRandom(){
         return new Task02Data{
-            InArr1 = Func.Func.GetArrRandom(7,0,9),
-            InArr2 = Func.Func.GetArrRandom(9,0,9)
+            InArr1 = ExtFuncs.GetArrRandom(7,0,9),
+            InArr2 = ExtFuncs.GetArrRandom(9,0,9)
         };
     }
 }
