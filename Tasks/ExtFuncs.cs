@@ -35,7 +35,7 @@ public static class ExtFuncs{
         return result;
     }
 
-    public static List<(int, int)> GetNeighborCells(int x,int y, int minX, int maxX, int minY, int maxY){
+    public static List<(int, int)> GetNeighborCellsOld(int x,int y, int minX, int maxX, int minY, int maxY){
         var result = new List<(int, int)>();
         for (int tx = x-1; tx <= x+1; tx++){
             for (int ty = y-1; ty <= y+1; ty++){
@@ -46,6 +46,19 @@ public static class ExtFuncs{
             }    
         }
 
+        return result;
+    }
+    
+    public static List<(int, int)> GetNeighborCells(int x,int y, int minX, int maxX, int minY, int maxY){
+        var result = new List<(int, int)>();
+        for (var tx = Math.Max(x-1,minX); tx <= Math.Min(x+1,maxX); tx++){
+            for (var ty = Math.Max(y-1,minY); ty <= Math.Min(y+1,maxY); ty++){
+                if (tx == x && ty == y){
+                    continue;
+                }
+                result.Add((tx,ty));
+            }    
+        }
         return result;
     }
 }
