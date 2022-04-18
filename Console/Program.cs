@@ -1,35 +1,26 @@
 ﻿using Tasks;
-using Tasks.Task00;
-using Tasks.Task01;
-using Tasks.Task02;
 
-void RunTaskWithRandomData<T>(){
-    var (taskGenerator, taskSolution, taskOutConsole) = FactoryTasks.GetTaskHandlers<T>();
-
-    var data = taskGenerator.GetRandom();
+void RunTask(int taskNum, EnGeneratorType enGeneratorType){
+    var (taskGenerator, taskSolution, taskOutConsole) = FactoryTasks.GetTaskHandlers(taskNum);
+    var data = enGeneratorType switch{
+        EnGeneratorType.Prepared => taskGenerator.GetPrepared(),
+        EnGeneratorType.Random => taskGenerator.GetRandom(),
+        _ => throw new ArgumentOutOfRangeException(nameof(enGeneratorType), enGeneratorType, null)
+    };
     data = taskSolution.Solve(data);
-    taskOutConsole.ToConsole(data);
+    taskOutConsole.Print(data);
 }
 
-void RunTaskWithPreparedData<T>(){
-    var (taskGenerator, taskSolution, taskOutConsole) = FactoryTasks.GetTaskHandlers<T>();
-
-    var data = taskGenerator.GetPrepared();
-    data = taskSolution.Solve(data);
-    taskOutConsole.ToConsole(data);
+for (var i = 0; i < 3; i++){
+    foreach (var generatorType in Enum.GetValues<EnGeneratorType>()){
+        Console.WriteLine($"\nTask{i} for {generatorType.ToString().ToLower()} data");
+        RunTask(0,generatorType);
+    }
 }
 
-Console.WriteLine("-----------Task00 Prepared data");
-RunTaskWithPreparedData<Task00Data>();
-Console.WriteLine("-----------Task00 Random data");
-RunTaskWithRandomData<Task00Data>();
+internal enum EnGeneratorType{
+    Random,
+    Prepared
+}
 
-Console.WriteLine("-----------Task01 Prepared data");
-RunTaskWithPreparedData<Task01Data>();
-Console.WriteLine("-----------Task01 Random data");
-RunTaskWithRandomData<Task01Data>();
 
-Console.WriteLine("-----------Task02 Prepared data");
-RunTaskWithPreparedData<Task02Data>();
-Console.WriteLine("-----------Task02 Random data");
-RunTaskWithRandomData<Task02Data>();

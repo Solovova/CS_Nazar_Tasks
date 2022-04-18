@@ -23,35 +23,20 @@ namespace GameLifeGui{
         }
 
         private void Button_Run_OnClick(object sender, RoutedEventArgs e){
-             var nx = 50;
-             var ny = 40;
-            // var width = Convert.ToInt32(Canvas1.ActualHeight);
-            // var height = Convert.ToInt32(Canvas1.Height);
-            // var dx = width / nx;
-            // var dy = height / ny;
-
-            //for (int i = 1; i < nx-3; i++){
-                // Canvas1.Children.Add(new Line{
-                //     StrokeStartLineCap = PenLineCap.Round,
-                //     StrokeEndLineCap = PenLineCap.Round,
-                //     StrokeThickness = 1,
-                //     Stroke = Brushes.Black,
-                //     X1 = dx*i,
-                //     X2 = dx*i,
-                //     Y1 = 0,
-                //     Y2 = dy*(ny-3)
-                // });    
-            //}
-            
-            
-            
+            var drawCanvas = new DrawCanvas();
+            drawCanvas.Draw(Canvas1);
         }
 
         private void Canvas1_OnMouseMove(object sender, MouseEventArgs e){
             if (e.MouseDevice.LeftButton == MouseButtonState.Pressed){
                 //var X = e.GetPosition(Canvas1).X;
-                
             }
         }
+
+        private void Canvas1_OnSizeChanged(object sender, SizeChangedEventArgs e){
+            var drawCanvas = new DrawCanvas();
+            drawCanvas.Draw(Canvas1);
+        }
+        
     }
 }

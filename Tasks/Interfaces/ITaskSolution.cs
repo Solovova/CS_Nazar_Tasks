@@ -1,5 +1,5 @@
 ﻿namespace Tasks.Interfaces;
 
-public interface ITaskSolution<T>{
-    public T Solve(T data);
+public interface ITaskSolution{
+    public TaskData Solve(TaskData data);
 }

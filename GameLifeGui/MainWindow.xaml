@@ -18,6 +18,6 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="Run" Click="Button_Run_OnClick" Margin="3"/>
         </Grid>
-        <Canvas Grid.Row="1" Name="Canvas1" MouseMove="Canvas1_OnMouseMove"></Canvas>
+        <Canvas Grid.Row="1" x:Name="Canvas1" MouseMove="Canvas1_OnMouseMove" SizeChanged="Canvas1_OnSizeChanged"></Canvas>
     </Grid>
 </Window>

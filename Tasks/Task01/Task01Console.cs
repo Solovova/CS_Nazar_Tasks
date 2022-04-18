@@ -2,8 +2,12 @@
 
 namespace Tasks.Task01;
 
-public class Task01OutConsole : ITaskOutConsole<Task01Data>{
-    public void ToConsole(Task01Data data){
+public class Task01Console : ITaskConsole{
+    public void Print(TaskData dataIn){
+        if (dataIn is not Task01Data data){
+            throw new ArgumentException();
+        }
+        
         if (data.InArr1 == null || data.InArr2 == null || data.OutArr == null){
             throw new ArgumentNullException();
         }

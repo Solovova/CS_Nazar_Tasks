@@ -1,6 +1,6 @@
 ﻿namespace Tasks.Interfaces;
 
-public interface ITaskGenerator<out T>{
-    public T GetPrepared();
-    public T GetRandom();
+public interface ITaskGenerator{
+    public TaskData GetPrepared();
+    public TaskData GetRandom();
 }

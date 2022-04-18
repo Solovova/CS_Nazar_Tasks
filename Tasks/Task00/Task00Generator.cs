@@ -2,8 +2,8 @@
 
 namespace Tasks.Task00;
 
-public class Task00Generator : ITaskGenerator<Task00Data>{
-    public Task00Data GetPrepared(){
+public class Task00Generator : ITaskGenerator{
+    public TaskData GetPrepared(){
         return new Task00Data{
             InArr = new[,]{
                 {0, 0, 0, 0, 0, 0, 0},
@@ -17,7 +17,7 @@ public class Task00Generator : ITaskGenerator<Task00Data>{
         };
     }
 
-    public Task00Data GetRandom(){
+    public TaskData GetRandom(){
         const int mi = 10;
         const int mj = 12;
         var arr = new int[mi, mj];

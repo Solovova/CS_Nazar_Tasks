@@ -2,7 +2,7 @@
 
 namespace Tasks.Task00;
 
-public class Task00Solution : ITaskSolution<Task00Data>{
+public class Task00Solution : ITaskSolution{
     private int GetTypeOfCell(int[,] arr, int i, int j){
         var neighborCells = ExtFuncs.GetNeighborCells(i, j, 
             0, arr.GetLength(0) - 1, 
@@ -23,7 +23,11 @@ public class Task00Solution : ITaskSolution<Task00Data>{
         };
     }
 
-    public Task00Data Solve(Task00Data data){
+    public TaskData Solve(TaskData dataIn){
+        if (dataIn is not Task00Data data){
+            throw new ArgumentException();
+        }
+        
         if (data.InArr == null){
             throw new ArgumentNullException();
         }

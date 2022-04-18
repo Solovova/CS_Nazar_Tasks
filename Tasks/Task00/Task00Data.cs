@@ -1,6 +1,8 @@
-﻿namespace Tasks.Task00;
+﻿using Tasks.Interfaces;
 
-public class Task00Data{
+namespace Tasks.Task00;
+
+public class Task00Data : TaskData{
     public int[,]? InArr;
     public int[,]? OutArr;
 }
